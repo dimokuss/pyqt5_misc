@@ -1,0 +1,74 @@
+{
+    "serviceDefinition":
+    {
+        "services":
+        [
+            {
+                "id": "Framework",
+                "global": true,
+                "module": "dselib.baseui.services.frameworkservice",
+                "service": "FrameworkService"
+            },
+            {
+                "id": "Perspective",
+                "global": true,
+                "module": "dselib.baseui.services.perspectiveservice",
+                "service": "PerspectiveService",
+                "configurator": "PerspectiveConfigurator"
+            },
+            {
+                "id": "Item",
+                "global": true,
+                "module": "dselib.baseui.services.itemservice",
+                "service": "ItemService"
+            },
+            {
+                "id": "Clipboard",
+                "global": true,
+                "module": "dselib.baseui.services.clipboardservice",
+                "service": "ClipboardService"
+            },
+            {
+               "id": "Settings",
+               "global": true,
+               "module": "dselib.baseui.services.settingsservice",
+               "service": "SettingsService"
+            }
+        ]
+    },
+    "imageDefinition":
+    {
+        "images":
+        {
+            "Item"                 : ["commonui/icons/explorer/data-small.svg", "icons/explorer/data-large.svg"],
+            "DesignItem"           : ["commonui/icons/explorer/data-small.svg", "icons/explorer/data-large.svg"]
+        }
+    },
+    "perspectiveDefinition":
+    {
+        "perspectives":
+        [
+            {
+                "name": "ItemManager",
+                "module": "dselib.subsystems.itemmanager.itemmanagerperspective",
+                "controller": "ItemManagerPerspective"
+            },
+            {
+                "name": "DseConfiguration",
+                "module": "dselib.subsystems.dseconfiguration.dseconfigurationperspective",
+                "controller": "DseConfigurationPerspective"
+            },
+            {
+                "name": "DseSetup",
+                "module": "dselib.subsystems.dsesetup.dsesetupperspective",
+                "controller": "DseSetupPerspective"
+            },
+            {
+                "name": "DsePostProcessing",
+                "module": "dselib.subsystems.dsepostprocessing.dsepostprocessingperspective",
+                "controller": "DsePostProcessingPerspective"
+            }
+
+        ]
+    }
+}
